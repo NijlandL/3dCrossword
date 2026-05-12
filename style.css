@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('assets/fonts/myfont.ttf') format('truetype');
+  font-display: swap;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #505f5f;
+  color: #1a1a1a;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 32px;
+  gap: 18px;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #1f2a2a;
+}
+
+#canvas-wrap canvas {
+  display: block;
+}
+
+#buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.row-btn {
+  font-family: 'MyFont', system-ui, sans-serif;
+  font-size: 12px;
+  color: #000;
+  background-color: #f2d1d7;
+  border: none;
+  border-radius: 0;
+  padding: 4px 14px;
+  min-width: 70px;
+  height: 22px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.row-btn:hover {
+  background-color: #f5bcc5;
+}
+
+.row-btn.ghost {
+  background-color: transparent;
+  color: #f2d1d7;
+  border: 1px solid #f2d1d7;
+}
+
+.row-btn.ghost:hover {
+  background-color: rgba(242, 209, 215, 0.15);
+  color: #f8e2e7;
+}
+
+/* === HUD bar (Arduino + current letter) === */
+
+.hud {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.letter-hud {
+  font-family: 'MyFont', system-ui, sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.letter-hud #current-letter {
+  display: inline-block;
+  min-width: 28px;
+  padding: 2px 8px;
+  background-color: #f2d1d7;
+  text-align: center;
+  font-weight: bold;
+}
+
+#arduino-status {
+  font-family: 'MyFont', system-ui, sans-serif;
+  font-size: 11px;
+  color: #888;
+}
+
+#arduino-status.connected {
+  color: #6ec46e;
+}

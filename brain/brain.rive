@@ -1,0 +1,27 @@
+! version = 2.0
+
+// brain.rive — RiveScript brain for the 3D Crossword chatbot
+// Edit the clues below. Lines starting with "+" are user inputs,
+// lines starting with "-" are bot responses.
+// Tutorial: https://www.rivescript.com/docs/tutorial
+
++ hello
+- Hello! Click a button or ask me about a row.
+
++ help
+- Type "row 1", "row 2", "row 3", or "row 4" for a clue.
+
++ row 1
+- clue for row 1 horizontal: orange president
+
++ row 2
+- clue for row 2 horizontal: ....vision
+
++ row 3
+- clue for row 3 horizontal:
+
++ row 4
+- clue for row 4 horizontal:
+
++ *
+- I don't know that one yet. Try "row 1" through "row 4".
