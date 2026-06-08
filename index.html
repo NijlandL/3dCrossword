@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>3D Crossword</title>
+    <title>3D Word Cube Puzzle</title>
     <link rel="stylesheet" href="style.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- RiveScript Library -->
     <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+    <!-- p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
+
+
 <body>
-    <h1 class="title">3D Crossword</h1>
+    <div id="container">
+        <!-- Het 3D Canvas komt hier -->
+        <div id="canvas-wrap"></div>
 
-    <main id="canvas-wrap"></main>
+        <!-- Het paneel met de Side en Row knoppen -->
+        <div id="ui-panel">
+            <div class="controls-row"> 
+                <div id="buttons">
+                    <!-- JavaScript vult dit met Side en Row knoppen -->
+                </div>
 
-    <nav id="buttons" aria-label="crossword rows"></nav>
+                <div class="hud">
+                    <div class="letter-hud">
+                        <div id="side-indicator" style="color: #ccc; font-size: 10px; margin-bottom: 5px;">SIDE 1</div>
+                        <span id="current-letter">A</span>
+                    </div>
+                </div>
+            </div> <!-- Einde controls-row -->
 
-    <div class="hud">
-      <button id="connect-arduino" class="row-btn">⚡ Connect Arduino</button>
-      <span id="arduino-status">○ disconnected</span>
-      <span class="letter-hud">Letter: <span id="current-letter">A</span></span>
-    </div>
+            <div id="controls">
+                <button id="connect-arduino">⚡ Connect Arduino</button>
+            </div>
+        </div> <!-- Einde ui-panel -->
+    </div> <!-- Einde container -->
 
-    <script src="js/arduino.js"></script>
-    <script src="js/chat.js"></script>
     <script src="js/sketch.js"></script>
 </body>
 </html>

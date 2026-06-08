@@ -1,27 +1,65 @@
 ! version = 2.0
 
-// brain.rive — RiveScript brain for the 3D Crossword chatbot
-// Edit the clues below. Lines starting with "+" are user inputs,
-// lines starting with "-" are bot responses.
-// Tutorial: https://www.rivescript.com/docs/tutorial
-
-+ hello
-- Hello! Click a button or ask me about a row.
-
-+ help
-- Type "row 1", "row 2", "row 3", or "row 4" for a clue.
-
-+ row 1
-- clue for row 1 horizontal: orange president
-
-+ row 2
-- clue for row 2 horizontal: ....vision
-
-+ row 3
-- clue for row 3 horizontal:
-
-+ row 4
-- clue for row 4 horizontal:
-
+// Standaard antwoord als de bot het niet weet
 + *
-- I don't know that one yet. Try "row 1" through "row 4".
+- Click on side and row for a clue!
+- Try a different row.
+
+// HINTS VOOR SIDE 1
++ s1 row 1
+- SIDE 1 R1: Largest continent
+
++ s1 row 2
+- SIDE 1 R2: Piss colored drink
+
++ s1 row 3
+- SIDE 1 R3: Chess piece
+
++ s1 row 4
+- SIDE 1 R4: Biblical garden
+
+// HINTS VOOR SIDE 2
++ s2 row 1
+- SIDE 2 R1: Twinkle twinkle
+
++ s2 row 2
+- SIDE 2 R2: Seven days
+
++ s2 row 3
+- SIDE 2 R3: Capital of Peru
+
++ s2 row 4
+- SIDE 2 R4: Yellow part of the egg
+
+// Hints side 3
++ s3 row 1
+- SIDE 3 R1: Is it a drink or is it a drug?
+
++ s3 row 2
+- SIDE 3 R2: Sandwich shop
+
++ s3 row 3
+- SIDE 3 R3: Restaurant list
+
++ s3 row 4
+- SIDE 3 R4: Drake's song "The motto" made this slang abreviation popular
+
+//Hints side 4
++ s4 row 1
+- SIDE 4 R1: Upcoming
+
++ s4 row 2
+- SIDE 4 R2: Vera plant
+
++ s4 row 3
+- SIDE 4 R3: Medieval weapon
+
++ s4 row 4
+- SIDE 4 R4: Monarch
+
+// Extra commando's
++ hallo
+- Hoi! Ik ben je puzzel-assistent. Klik op de knoppen onder de kubus voor hulp.
+
++ bedankt
+- Graag gedaan! Succes met het oplossen van de 3D puzzel.
